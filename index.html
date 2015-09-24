@@ -8,17 +8,163 @@
 </head>
 <body ng-app="app" ng-controller="MainCtrl">
 
-    <div class="container-fluid">
+<div class="main-container">
+    <div class="col-sm-3">
+        <div class="options panel panel-default select-block">
+            <div class="panel-heading">
+                <strong>Options:</strong>
+            </div>
+            <div class="panel-body">
+                <div class="year-input margin-bottom-5px">
+                    <label class="control-label col-sm-2 text-right info-label padding-0">
+                        From:
+                    </label>
 
+                    <div class="col-sm-4 padding-0">
+                        <input type="text" class="form-control" ng-model="from" style="width: 110%"/>
+                    </div>
+                    <label class="control-label col-sm-2 text-right info-label padding-0">
+                        To:
+                    </label>
+
+                    <div class="col-sm-4 padding-0">
+                        <input type="text" class="form-control" ng-model="to" style="width: 110%"/>
+                    </div>
+                </div>
+
+                <div class="show-type-input margin-bottom-5px">
+
+                </div>
+
+                <div class="episode-count-select">
+                    <label class="col-sm-7 padding-0 episode-count-select control-label info-label">
+                        min episodes:
+                    </label>
+
+                    <div class="col-sm-5 padding-0 margin-bottom-5px">
+                        <input type="text" class="form-control" ng-model="minEp"/>
+                    </div>
+                    <br/>
+                    <label class="col-sm-7 padding-0 episode-count-select control-label info-label">
+                        max episodes:
+                    </label>
+
+                    <div class="col-sm-5 padding-0 margin-bottom-5px">
+                        <input type="text" class="form-control" ng-model="maxEp"/>
+                    </div>
+                </div>
+
+                <div class="rating-select ">
+                    <label class="col-sm-3 padding-0 episode-count-select control-label info-label">
+                        rate min:
+                    </label>
+
+                    <div class="col-sm-3 padding-0 margin-bottom-5px">
+                        <input type="text" class="form-control" ng-model="minRating"/>
+                    </div>
+                    <label class="col-sm-3 padding-0 episode-count-select control-label info-label">
+                        rate max:
+                    </label>
+
+                    <div class="col-sm-3 padding-0 margin-bottom-5px">
+                        <input type="text" class="form-control" ng-model="maxRating"/>
+                    </div>
+                </div>
+
+                <div class="status-select">
+                    <label class="col-sm-3 padding-0 control-label info-label">
+                        Status:
+                    </label>
+
+                    <div class="col-sm-9 padding-0 margin-bottom-5px">
+                        <select class="form-control" id="stSel"></select>
+                    </div>
+                </div>
+
+                <div class="exclude_18">
+                    <input type="checkbox" ng-model="exc18"/>
+                    <label class="control-label" ng-click="exc18 = !exc18">
+                        Exclude R18+ results
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <div class="col-sm-3">
+        <div class="genre-include panel panel-default select-block">
+            <div class="panel-heading">
+                <strong>Include genres</strong>
+            </div>
+            <div class="panel-body genre-list-overflow">
+                <div class="i-genres">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="genre-exclude panel panel-default select-block">
+            <div class="panel-heading">
+                <strong>Exclude genres</strong>
+            </div>
+            <div class="panel-body genre-list-overflow">
+                <div class="e-genres">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="other-options panel panel-default select-block">
+            <div class="panel-heading">
+                <strong>Other options</strong>
+            </div>
+            <div class="panel-body">
+                <input checked type="radio" id="genres-or-inc" name="inc-group"/>
+                <label class="text-right input-label" for="genres-or-inc">OR include genres selection</label>
+                <br/>
+                <input type="radio" id="genres-and-inc" name="inc-group"/>
+                <label class="text-right input-label" for="genres-and-inc">AND include genres selection</label>
+
+                <br/>
+
+                <input checked type="radio" id="genres-or-exc" name="exc-group"/>
+                <label class="text-right input-label" for="genres-or-exc">OR exclude genres selection</label>
+                <br/>
+                <input type="radio" id="genres-and-exc" name="exc-group"/>
+                <label class="text-right input-label" for="genres-and-exc">AND exclude genres selection</label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-sm-12">
+        <div class="panel panel-default result">
+            <div class="panel-heading">
+                <strong>Result:</strong>
+                <button type="button" class="btn btn-success btn-roll" ng-click="roll();">
+                    Spin wheel of sheet
+                </button>
+            </div>
+            <div class="panel-body">
+
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
-        <script src="node_modules/jquery/dist/jquery.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="node_modules/angular/angular.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/mainCtrl.js"></script>
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/mainCtrl.js"></script>
+
 
 </body>
 </html>

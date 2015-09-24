@@ -1,0 +1,85 @@
+.main-container {
+
+}
+
+.options {
+
+}
+
+.info-label {
+    margin-top: 7px;
+}
+
+.year-input {
+
+}
+
+.show-type-input {
+
+}
+
+.episode-count-select {
+
+}
+
+.rating-select {
+
+}
+
+.status-select {
+
+}
+
+.exclude_18 {
+
+}
+
+.genre-include {
+
+}
+
+.i-genres {
+
+}
+
+.genre-exclude {
+
+}
+
+.e-genres {
+
+}
+
+.other-options {
+
+}
+
+.result {
+    min-height: 200px;
+}
+
+.btn-roll {
+    margin-top: -7px!important;
+    float: right;
+}
+
+.margin-bottom-5px {
+    margin-bottom: 5px;
+}
+
+.padding-0{
+    padding: 0 !important;
+}
+
+.select-block {
+    height: 350px;
+}
+
+.select-block-margin {
+    margin-left: 5px;
+}
+
+.genre-list-overflow {
+    max-height: 310px;
+    overflow: auto;
+}
