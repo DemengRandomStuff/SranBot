@@ -17,6 +17,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
     err ? console.error(err) : console.info('DB connected');
 });
+
 /*
 Query example
 connection.query("SELECT * FROM anime ORDER BY id DESC limit 1", function(err, row, fields) {
